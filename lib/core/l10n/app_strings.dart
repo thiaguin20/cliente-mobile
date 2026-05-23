@@ -15,6 +15,8 @@ class AppStrings {
   String get settings => isPortuguese ? 'Configurações' : 'Settings';
   String get settingsTab => isPortuguese ? 'Ajustes' : 'Settings';
   String get todayOverview => isPortuguese ? 'Visão do dia' : 'Today overview';
+  String get openServices =>
+      isPortuguese ? 'Serviços abertos' : 'Open services';
   String get welcomeTitle =>
       isPortuguese ? 'Organize seus atendimentos' : 'Organize your work';
   String get welcomeSubtitle => isPortuguese
