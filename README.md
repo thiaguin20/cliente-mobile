@@ -1,26 +1,27 @@
 # Cliente Mobile
 
-Cliente Mobile e um mini CRM offline feito com Flutter e Dart. O app foi pensado para pequenos empreendedores, autonomos e freelancers que precisam organizar clientes e servicos de forma simples, sem depender de internet, planilhas ou conversas perdidas no WhatsApp.
+Mini CRM mobile offline desenvolvido em Flutter e Dart. O app organiza clientes e serviços sem depender de internet, usando banco local com SQLite.
 
-## Objetivo
+## Demonstração
 
-O projeto nasceu a partir de uma especificacao academica de um aplicativo mobile de gestao de clientes. A proposta original usava React Native, API em Node.js e MongoDB em nuvem. Nesta versao, o projeto foi adaptado para Flutter com funcionamento local/offline usando SQLite.
+<video src="assets/demo.mp4" controls muted></video>
+
+Se o vídeo não aparecer no GitHub, acesse diretamente: [assets/demo.mp4](assets/demo.mp4).
 
 ## Funcionalidades
 
-- Cadastro, edicao e exclusao de clientes.
-- Cadastro, edicao e exclusao de servicos.
-- Vinculo de servicos a clientes.
-- Status de servico: pendente, em andamento e concluido.
-- Confirmacao ao alterar um servico ja concluido.
+- Cadastro, edição e exclusão de clientes.
+- Cadastro, edição e exclusão de serviços.
+- Vínculo de serviços a clientes.
+- Status de serviço: pendente, em andamento e concluído.
 - Busca de clientes por nome ou telefone.
-- Busca de servicos por titulo.
-- Filtro de servicos por status e por cliente.
-- Dashboard com resumo dos servicos.
-- Tela de metricas com valores e progresso por status.
+- Busca de serviços por título.
+- Filtro de serviços por status e por cliente.
+- Dashboard com resumo dos serviços.
+- Tela de métricas com valores e progresso por status.
 - Tema claro e escuro.
-- Interface em portugues e ingles.
-- Armazenamento local com SQLite.
+- Interface em português e inglês.
+- Armazenamento local offline com SQLite.
 
 ## Tecnologias
 
@@ -30,7 +31,7 @@ O projeto nasceu a partir de uma especificacao academica de um aplicativo mobile
 - sqflite
 - Material Design
 
-## Estrutura do Projeto
+## Estrutura
 
 ```text
 lib/
@@ -40,27 +41,18 @@ lib/
   features/
 ```
 
-`app/` contem a configuracao principal do aplicativo, tema e navegacao.
+- `app`: configuração principal, tema e navegação.
+- `core`: constantes, textos, formatadores e widgets reutilizáveis.
+- `data`: banco local, models, repositories e controller de dados.
+- `features`: telas de clientes, serviços, métricas e configurações.
 
-`core/` contem constantes, textos, formatadores e widgets reutilizaveis.
-
-`data/` contem banco local, models, repositories e controller de dados.
-
-`features/` contem as telas principais: Home, Clientes, Servicos, Metricas e Configuracoes.
-
-## Como Rodar
-
-Clone o repositorio, entre na pasta do projeto e execute:
+## Como rodar
 
 ```powershell
 flutter pub get
 flutter run
 ```
 
-Se o Flutter nao estiver no PATH, use o caminho completo do SDK instalado na maquina.
-
 ## Status
 
-MVP funcional concluido.
-
-O app ja permite cadastrar clientes, cadastrar servicos, vincular servicos a clientes, editar, excluir, filtrar e visualizar metricas usando armazenamento local.
+MVP funcional concluído. Foi meu primeiro app Flutter/Dart com foco em uso real offline.
